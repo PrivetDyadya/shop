@@ -1,0 +1,6 @@
+<% @items.each do |i| %>
+	<p><%= i.id %> <%= link_to i.name, item_path(i) %> :<%= i.price %></p>
+	<p> :<%= link_to "delete!", i, method: :delete, data:{confirm: "are you sure?.."} %></p>
+	<p>RATE:  <%= link_to "+", upvote_item_path(i) %></p>
+
+<% end %>
